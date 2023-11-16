@@ -1,0 +1,182 @@
+my fourth  preparation  project ---->
+https://todolist-app-react-js-kappa.vercel.app/ (git repo -https://github.com/hackerbotsupreme/todolist-app-react-js)
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+
+folder structre -> 
+public
+    favicon.ico
+    index.html
+    logo192.png
+    logo512.png
+    manifest.json
+    robots.txt
+src
+    components
+        EditTodoForm.js
+        Todo.js
+        TodoForm.js
+        TodoWrapper.js
+        TodoWrapperLocalStorage.js
+    App.css
+    App.js
+    index.js
+.gitignore
+README.md
+package-lock.json
+package.json
+
+///////////////////////////////////////////////////////////////////////////////////////////
+    index.html
+
+Sure, I can ask you some questions about your code:
+
+1. I see that you have `export default Navbar` and `export default AddToDo` in your code. Can you explain what these components do in your application?
+2. In your HTML file, you have a `div` with `id="root"`. Can you explain why you chose this id and what its purpose is in your React application?
+3. You have a `manifest.json` file linked in your HTML. Can you explain what the purpose of this file is?
+4. I noticed that you have `%PUBLIC_URL%` in your HTML file. Can you explain what it does and why it's needed?
+5. Lastly, can you explain the build process of your application? What commands do you use to start the development server and to create a production bundle?
+
+These questions should help you think critically about your code and its structure. If you have any more code or other questions, feel free to ask!
+///////////////////////////////////////////////////////////////////////////////////////////
+    manifest.json
+
+Sure, I can ask you some questions about your code:
+
+1. I see that you have `export default Navbar` and `export default AddToDo` in your code. Can you explain what these components do in your application?
+2. In your manifest file, you have a `short_name` and `name` property. Can you explain the difference between these two properties and why they are needed?
+3. You have several icons listed in your manifest file with different sizes. Can you explain why you need different sizes for your icons and how they are used?
+4. The `start_url` property in your manifest file is set to `"."`. Can you explain what this means and why it's set to this value?
+5. Lastly, you have `theme_color` and `background_color` properties in your manifest file. Can you explain what these properties do and why they are important for your application?
+
+These questions should help you think critically about your code and its structure. If you have any more code or other questions, feel free to ask!
+
+///////////////////////////////////////////////////////////////////////////////////////////
+    robots.txt
+
+Sure, I can ask you some questions about your code:
+
+1. I see that you have `export default Navbar` and `export default AddToDo` in your code. Can you explain what these components do in your application?
+2. In your robots.txt file, you have `User-agent: *` and `Disallow:`. Can you explain what these lines do and why they are important for your website?
+3. Can you explain the purpose of a robots.txt file and how it affects search engine optimization (SEO)?
+4. The `Disallow:` directive in your robots.txt file is empty. Can you explain what this means for web crawlers accessing your site?
+5. Lastly, can you explain how the robots.txt file and your React components (`Navbar` and `AddToDo`) relate to each other in your project?
+
+These questions should help you think critically about your code and its structure. If you have any more code or other questions, feel free to ask!
+
+///////////////////////////////////////////////////////////////////////////////////////////
+        EditTodoForm.js
+
+import React, {useState} from 'react'
+
+export const EditTodoForm = ({editTodo, task}) => {
+    const [value, setValue] = useState(task.task);
+
+    const handleSubmit = (e) => {
+      // prevent default action
+        e.preventDefault();
+        // edit todo
+        editTodo(value, task.id);
+      };
+  return (
+    <form onSubmit={handleSubmit} className="TodoForm">
+    <input type="text" value={value} onChange={(e) => setValue(e.target.value)} className="todo-input" placeholder='Update task' />
+    <button type="submit" className='todo-btn'>Add Task</button>
+  </form>
+  )
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////
+        Todo.js
+
+Sure, I can ask you some questions about your code:
+
+1. I see that you have `export default Navbar` and `export default AddToDo` in your code. Can you explain what these components do in your application?
+2. In your robots.txt file, you have `User-agent: *` and `Disallow:`. Can you explain what these lines do and why they are important for your website?
+3. Can you explain the purpose of a robots.txt file and how it affects search engine optimization (SEO)?
+4. The `Disallow:` directive in your robots.txt file is empty. Can you explain what this means for web crawlers accessing your site?
+5. Lastly, can you explain how the robots.txt file and your React components (`Navbar` and `AddToDo`) relate to each other in your project?
+
+These questions should help you think critically about your code and its structure. If you have any more code or other questions, feel free to ask!
+///////////////////////////////////////////////////////////////////////////////////////////
+        TodoForm.js
+
+Sure, I can ask you some questions about your code:
+
+1. I see that you have `export default Navbar` and `export default AddToDo` in your code. Can you explain what these components do in your application?
+2. In your `TodoForm` component, you are using the `useState` hook from React. Can you explain what this hook does and why you chose to use it?
+3. You have a `handleSubmit` function in your `TodoForm` component. Can you explain what this function does when the form is submitted?
+4. In your `TodoForm` component, you have an input field with a value of `value` and an `onChange` handler that updates `value`. Can you explain how this creates a controlled component in React?
+5. Lastly, you have an `addTodo` function being passed as a prop to your `TodoForm` component. Can you explain what this function does and why it's needed?
+
+These questions should help you think critically about your code and its structure. If you have any more code or other questions, feel free to ask
+!
+///////////////////////////////////////////////////////////////////////////////////////////
+        TodoWrapper.js
+
+Sure, I can ask you some questions about your code:
+
+1. I see that you have `export default Navbar` and `export default AddToDo` in your code. Can you explain what these components do in your application?
+2. In your `TodoWrapper` component, you are using the `useState` hook from React. Can you explain what this hook does and why you chose to use it?
+3. You have several functions in your `TodoWrapper` component such as `addTodo`, `deleteTodo`, `toggleComplete`, `editTodo`, and `editTask`. Can you explain what each of these functions do and how they modify the state of your component?
+4. In your `TodoWrapper` component, you are using the `uuidv4` function from the `uuid` package. Can you explain what this function does and why it's needed in your application?
+5. Lastly, you are conditionally rendering either the `EditTodoForm` or `Todo` component based on the `isEditing` property of each todo. Can you explain how this works and why it's necessary for your application?
+
+These questions should help you think critically about your code and its structure. If you have any more code or other questions, feel free to ask!
+
+///////////////////////////////////////////////////////////////////////////////////////////
+        TodoWrapperLocalStorage.js
+
+Sure, I can ask you some questions about your code:
+
+1. I see that you have `export default Navbar` and `export default AddToDo` in your code. Can you explain what these components do in your application?
+2. In your `TodoWrapperLocalStorage` component, you are using the `useState` and `useEffect` hooks from React. Can you explain what these hooks do and why you chose to use them?
+3. You have several functions in your `TodoWrapperLocalStorage` component such as `addTodo`, `deleteTodo`, `toggleComplete`, `editTodo`, and `editTask`. Can you explain what each of these functions do and how they modify the state of your component?
+4. In your `TodoWrapperLocalStorage` component, you are using the `uuidv4` function from the `uuid` package. Can you explain what this function does and why it's needed in your application?
+5. You are using `localStorage` to persist your todos. Can you explain how this works and why it's necessary for your application?
+6. Lastly, you are conditionally rendering either the `EditTodoForm` or `Todo` component based on the `isEditing` property of each todo. Can you explain how this works and why it's necessary for your application?
+
+These questions should help you think critically about your code and its structure. If you have any more code or other questions, feel free to ask!
+
+
+///////////////////////////////////////////////////////////////////////////////////////////
+    App.css
+
+Sure, I can ask you some questions about your CSS code:
+
+1. I see that you have `export default Navbar` and `export default AddToDo` in your code. Can you explain what these components do in your application?
+2. You are using the `Poppins` font from Google Fonts in your CSS. Can you explain why you chose this font and how it affects the look and feel of your application?
+3. In your CSS, you have several classes such as `.TodoWrapper`, `.TodoForm`, `.todo-input`, and `.Todo`. Can you explain what each of these classes do and how they style your components?
+4. You are using the `box-sizing: border-box;` property in your CSS. Can you explain what this property does and why it's important for your layout?
+5. Lastly, you are using several color codes in your CSS such as `#8758ff`, `#1A1A40`, and `#c5aeff`. Can you explain why you chose these colors and how they contribute to the overall design of your application?
+
+These questions should help you think critically about your CSS code and its design. If you have any more code or other questions, feel free to ask!
+
+
+///////////////////////////////////////////////////////////////////////////////////////////
+    App.js
+
+Sure, I can ask you some questions about your code:
+
+1. I see that you have `export default Navbar` and `export default AddToDo` in your code. Can you explain what these components do in your application?
+2. In your `App` component, you are importing the `TodoWrapper` component from `./components/TodoWrapper`. Can you explain what this component does and why it's needed in your `App` component?
+3. You are using the `App` CSS class in your `App` component. Can you explain what styles this class applies and how it affects the appearance of your component?
+4. Your `App` component is a functional component. Can you explain the difference between functional components and class components in React?
+5. Lastly, you are exporting your `App` component using `export default App`. Can you explain what `export default` does and why it's necessary?
+
+These questions should help you think critically about your code and its structure. If you have any more code or other questions, feel free to ask!
+
+
+///////////////////////////////////////////////////////////////////////////////////////////
+    index.js
+Sure, I can ask you some questions about your code:
+
+1. I see that you have `export default Navbar` and `export default AddToDo` in your code. Can you explain what these components do in your application?
+2. In your main file, you are importing the `App` component from `./App`. Can you explain what this component does and why it's needed in your main file?
+3. You are using the `ReactDOM.createRoot` method to create a root for your React application. Can you explain what this method does and how it differs from the `ReactDOM.render` method?
+4. Your `App` component is wrapped in `React.StrictMode`. Can you explain what `React.StrictMode` does and why it's beneficial to use in your application?
+5. Lastly, you are selecting an element with the id of "root" to render your React application. Can you explain why you chose this id and what its purpose is in your application?
+
+These questions should help you think critically about your code and its structure. If you have any more code or other questions, feel free to ask!
+///////////////////////////////////////////////////////////////////////////////////////////
